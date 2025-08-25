@@ -3,7 +3,7 @@ const bcrypt = require("bcryptjs");
 const dotenv = require("dotenv");
 
 
-dotenv.config();
+dotenv.config({ path: '../.env' });
 
 const User = require("../models/User");
 const Product = require("../models/Product");

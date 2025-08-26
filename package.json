@@ -1,18 +1,24 @@
 {
   "dependencies": {
+    "bcrypt": "^6.0.0",
     "bcryptjs": "^3.0.2",
     "cors": "^2.8.5",
     "dotenv": "^17.2.1",
     "express": "^5.1.0",
     "jsonwebtoken": "^9.0.2",
-    "migrate-mongoose": "^0.1.0",
     "mongoose": "^8.17.2",
     "morgan": "^1.10.1"
   },
   "devDependencies": {
+    "cross-env": "^10.0.0",
+    "dotenv-cli": "^10.0.0",
+    "migrate-mongoose": "^0.1.0",
     "nodemon": "^3.1.10"
   },
-    "scripts": {
-    "start": "nodemon app.js"
+  "scripts": {
+    "start": "nodemon app.js",
+    "migrate:up": "node migrations/migrate.js up",
+    "migrate:down": "node migrations/migrate.js down",
+    "migrate:list": "node migrations/migrate.js list"
   }
 }
